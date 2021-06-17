@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block title %}
+Add / Edit Posts 
+{% endblock %}
+{% block body %}
+   <!-- Page Header-->
+   <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Edit/Add Posts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h1>Edit/Add Posts</h1>
+            <div class="container">
+                
+                <form name="sentMessage" action = "/edit/{{sno}}" method="post" novalidate>
+                    <div class="form-floating">
+                        <input name="title" class="form-control" id="title" type="text" placeholder="Title" value="{{post.title}}"/>
+                        <label for="name">Title</label>
+                    </div>
+                    <div class="form-floating">
+                        <input name="slug" class="form-control" id="slug" type="text" placeholder="Slug" value="{{post.slug}}"/>
+                        <label for="email">Slug</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea name="content" class="form-control" id="content" type="text" placeholder="content" value="{{post.content}}" style="height: 70vh;">{{post.content}}</textarea>
+                        <label for="phone">Content</label>
+                        </div>
+                    <div class="form-floating">
+                        <input name="img_file" class="form-control" id="img_file" type="text" placeholder="Image File Placeholder" value="{{post.img_file}}" />
+                        <label for="img_file">Image File Label</label>
+                        </div>
+                   
+                    <br />
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    {% if sno=='0' %}
+                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Add</button>
+                    {% else %}
+                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Update</button>
+                    {% endif %}
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+{% endblock %}

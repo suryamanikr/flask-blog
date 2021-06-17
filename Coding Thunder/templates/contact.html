@@ -28,7 +28,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form name="sentMessage" action = "/contact" method="post" novalidate>
+                            <form name="sentMessage" action = "{{url_for('contact')}}" method="post" novalidate>
                                 <div class="form-floating">
                                     <input name="name" class="form-control" id="name" type="text" placeholder="Enter your name..." />
                                     <label for="name">Name</label>
@@ -42,9 +42,10 @@
                                     <label for="phone">Phone Number</label>
                                      </div>
                                 <div class="form-floating">
-                                    <textarea name="msg" class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem"></textarea>
-                                    <label for="message">Message</label>
-                                    </div>
+                                    <textarea name="msg" class="form-control" id="msg" placeholder="Message" type="textarea" style="min-height: :500px;"></textarea>
+                                    <label for="msg">Message</label>
+            
+                                </div>
                                 <br />
                                 <!-- Submit success message-->
                                 <!---->
@@ -69,5 +70,4 @@
                 </div>
             </div>
         </main>
-    
 {% endblock body %}
