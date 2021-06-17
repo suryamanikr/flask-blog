@@ -37,24 +37,24 @@ db = SQLAlchemy(app)
 
 class Contacts(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
     phone_num = db.Column(db.String(12), nullable=False)
-    msg = db.Column(db.String(), nullable=False)
+    msg = db.Column(db.Text(), nullable=False)
     date = db.Column(db.String(), nullable=True)
-    email = db.Column(db.String(), nullable=False)
+    email = db.Column(db.String(50), nullable=False)
 
 
 class Posts(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(), nullable=False)
-    slug = db.Column(db.String(), nullable=False)
-    content = db.Column(db.String(), nullable=False)
+    title = db.Column(db.String(50), nullable=False)
+    slug = db.Column(db.String(25), nullable=False)
+    content = db.Column(db.Text(), nullable=False)
     date = db.Column(db.String(), nullable=True)
-    img_file = db.Column(db.String(), nullable=True)
+    img_file = db.Column(db.String(10), nullable=True)
 
 
-db.create_all()
-db.session.commit()
+# db.create_all()
+# db.session.commit()
 
 
 @app.route("/")
