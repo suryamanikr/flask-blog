@@ -1,10 +1,22 @@
+{
+    "params" : {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codingthunder",
+        "prod_uri": "mysql://root:@localhost/codingthunder",
 
-parameters = {
-    blog_title:"Coding Thunder",
-    blog_tagline:"A Blog for programmers and by programmers.",
-    no_of_posts_on_homepage:5,
-    twitter_url:"twitter.com/codingthunder",
-    facebook_url:"facebook.com/codingthunder",
-    github_url:"github.com/codingthunder",
-    about_blog:"If you don’t know the first thing about coding, you’ve come to the right place. We’ve put together a beginner’s tutorial which will give you all the background information you need on coding, before you start learning it for real. It starts with an explanation on the benefits of learning coding. Here, you’ll find out what you’ll be able to do once you know how to work with code. Then, you’ll get a deeper understanding of how coding works, and how the code you write gets converted into an instruction that a computer can ‘understand’. Very satisfying to know!"
-};
+        "blog_name":"Coding Thunder",
+        "blog_tagline":"A Blog for programmers and by programmers.",
+        "no_of_posts_on_homepage":5,
+        "twitter_url":"https://twitter.com/codingthunder",
+        "facebook_url":"https://facebook.com/codingthunder",
+        "github_url":"https://github.com/codingthunder",
+        "about_blog":"If you don’t know the first thing about coding, you’ve come to the right place. We’ve put together a beginner’s tutorial which will give you all the background information you need on coding, before you start learning it for real. It starts with an explanation on the benefits of learning coding. Here, you’ll find out what you’ll be able to do once you know how to work with code. Then, you’ll get a deeper understanding of how coding works, and how the code you write gets converted into an instruction that a computer can ‘understand’. Very satisfying to know!",
+        "gmail-id": "abc@gmail.com",
+        "gmail-password":"fake-password",
+        "login_image": "login.png",
+        "admin_username": "surya",
+        "admin_password": "pass",
+        "upload_folder": "E:\\Suryamani Programmming\\Flask Projects\\Coding Thunder\\static\\assets\\img"
+    }
+}
+
